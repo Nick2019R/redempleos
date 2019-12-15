@@ -1,0 +1,36 @@
+body{
+  background-image: url(../images/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: black;
+}
+h1{
+  font-family: sans-serif;
+  color:#A7A79F!important;
+}
+.contenedor{
+  margin: 40px !important;
+  border-radius: 10px;
+}
+.logo{
+  margin-top: 1px;
+  width:59px;
+}
+i{
+  color:#A7A79F ;
+}
+label{
+  font-size: 25px !important;
+}
+select{
+  margin-top: 15px !important;
+}
+span{
+  font-size: 18px !important;
+}
+@media (max-width: 1000px) {
+  body{
+    background: #ECEC6F;
+  }
+}
