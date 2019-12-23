@@ -1,0 +1,157 @@
+body{
+ background: #CDCED3;
+}
+.nav-extended{
+  background: #66B1E9;
+  border-radius: 10px;
+}
+ul a{
+  background:#411E82;
+  border-radius: 10px;
+}
+.logor{
+width: 25vw;
+border-radius: 30px;
+}
+.center a{
+  height: 8vh;
+  padding:px;
+  font-size: 2vw;
+  font-family: monospace;
+  background: #411E82;
+  border-radius: 10px;
+  border: 7px solid white;
+}
+h1,h2{
+  font-family: sans-serif;
+  background:#411E82;
+  border-radius: 20px;
+  color:white;
+  font-size: 6vw;
+}
+
+h5{
+  font-size: 3vw;
+  margin-bottom: 3vh;
+}
+.container{
+  background: white;
+  border-radius: 20px;
+  padding: 2vw;
+  margin-bottom: 5vh;
+}
+.card{
+  height: 30vh;
+  font-size: 2vw;
+  border-radius: 30px;
+  background: #66B1E9;
+  color:white;
+  border: 7px solid #411E82;
+  margin-bottom: 3vh;
+}
+.info{
+  font-size: 1.5vw;
+}
+.card a{
+  margin-top: 1vh !important;
+  background:#411E82 ;
+  border-radius: 10px;
+  color: white;
+  border: 5px solid white;
+  font-size: 2vw;
+}
+
+.card-reveal{
+  background: #66B1E9 !important;
+}
+.card-title{
+  font-size: 3vw!important;
+  color: white !important;
+}
+.masofer{
+  font-size:
+}
+.btnempleador:hover{
+  border: 7px solid #411E82;
+}
+.card:hover{
+ border: 7px solid white;
+}
+
+/*para celulares */
+
+ @media (max-width:1000px) {
+   body{
+    background: #CDCED3;
+   }
+   .nav-extended{
+     background: #66B1E9;
+     border-radius: 10px;
+   }
+   .logor{
+   width: 50vw;
+   border-radius: 30px;
+   }
+   .center a{
+     height: 6vh;
+     padding:30px;
+     font-size: 4vw;
+     font-family: monospace;
+     background: #66B1E9;
+     border-radius: 10px;
+     border: 7px solid white;
+   }
+   h1{
+     font-family: sans-serif;
+     background: #4556B5;
+     border-radius: 20px;
+     color:white;
+     font-size: 9vw;
+   }
+
+   h5{
+     font-size: 8vw;
+     margin-bottom: 5vh;
+   }
+   .card{
+     height: 28vh;
+     font-size: 4.6vw;
+     border-radius: 30px;
+     background: #66B1E9;
+     color:white;
+     border: 7px solid #4556B5;
+     margin-bottom: 3vh;
+   }
+   span a{
+     width: 5vh!important;
+     height: 5vh!important;
+     background: #4556B5;
+   }
+   span i{
+     width: 80px !important;
+   }
+   .card a{
+     margin-top: 2vh !important;
+     background:#4556B5 ;
+     border-radius: 10px;
+     color: white;
+     border: 5px solid white;
+     font-size: 5vw;
+   }
+   .btnempleador{
+     margin-top: 30px !important;
+   }
+   .card-reveal{
+     background: #66B1E9 !important;
+   }
+   .card-title{
+     font-size: 7vw!important;
+     color: white !important;
+   }
+   .masofer{
+     font-size:
+   }
+   .card:hover{
+    border: 7px solid white;
+   }
+ }

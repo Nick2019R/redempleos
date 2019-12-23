@@ -1,108 +1,134 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" scroll="no">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Registrate en Redempleos Guateque</title>
   </head>
   <body>
+    <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <img src="images/logoREG.png" class="logor" alt="">
+      <ul class="right hide-on-med-and-down">
+        <li><a href="welcome.html">Página principal<i class="material-icons right">home</i></a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+    </div>
+  </nav>
+    <div class="row">
+      <div class="container">
+      </div>
+    </div>
     <h1 class="center">Realiza tu primera acción y comencémos a darle vida a la <b>Red De Empleos</b></h1>
     <div class="row">
-      <div class="col s11 m11 l5 contenedor z-depth-4" style="border: 1px solid white">
+      <div class="container">
         <form class="col s12">
-          <div class="row">
+          <div class="anegocio row" >
+            <div class="col s12">
+              <h3 class="center" ><b>Registra tu negocio</b></h3>
+              <p class="center"><b>En caso de que tengas un establecimiento comercial</b> ,registra tu negocio y empieza a formar parte de un directorio local por medio del cúal darémos a conocer tu negocio en Guateque.</p>
+              <div class="center">
+                <a class="waves-effect waves-light btn" id="registrar">Registrar mi negocio</a>
+              </div>
+            </div>
+          </div>
+          <div class="negocio row">
+            <h2 class="center">Estás registrando tu negocio</h2>
             <div class="input-field col s12">
-              <label class="active">Qué función vas a desempeñar ésta vez?</label>
-                <select class="tipo browser-default">
-                  <option value="" disabled selected>Escoge una opción</option>
-                  <option value="1">Empresa</option>
-                  <option value="2" class="persona-op">Persona</option>
-                </select>
-                <span class="ayuda1 helper-text" data-error="wrong" data-success="right">Escoge <b>empresa</b> si quieres ofrecer vacantes o dar a conocer los servicios que encontrarémos en tu negocio o los que ofreces como trabajador independiente y a domicilio y <b>persona</b> si quieres contratar un servicio: desde un pago de facturas hasta sacar a pasear tu perro o construir el segundo piso de tu casa Y también si quieres encontrar tu próximo trabajo</span>
+              <input placeholder="Por ejemplo: Peluqueria" id="actividadN" type="text" class="flow-text">
+              <label for="actividadN">Describe la actividad que se realiza en tu negocio</label>
             </div>
-            <div class="empresa input-field col s12" >
-              <label class="active">Qué quieres hacer como empresa?</label>
-                <select class="Qempresa browser-default">
-                  <option value="" disabled selected>Escoge una opción</option>
-                  <option value="1">Ofrecer vacantes</option>
-                  <option value="2">Ofrecer servicios</option>
-                </select>
+            <div class="input-field col s12">
+              <input placeholder="" id="nombreD" type="text" class="validate">
+              <label for="nombreD">Nombre del encargado del negocio</label>
             </div>
-            <div class="persona input-field col s12">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="nombre">
-              <label class="active" for="icon_prefix">Nombre Completo</label>
+            <div class="input-field col s12">
+              <input placeholder="" id="numerD" type="text" class="validate">
+              <label for="numeroD">Número al que te podamos contactar</label>
             </div>
-            <div class="persona input-field col s12">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label class="active" for="icon_telephone">Número celular</label>
+            <div class="input-field col s12">
+              <input placeholder="" id="nombreN" type="text" class="validate">
+              <label for="nombreN">Nombre de tu negocio</label>
             </div>
-            <div class="persona input-field col s12">
-              <label class="active">Qué quieres hacer como persona?</label>
-                <select class="Qpersona browser-default">
-                  <option value="" disabled selected>Escoge una opción</option>
-                  <option value="1">Contratar un servicio</option>
-                  <option value="2">Buscar trabajo</option>
-                </select>
+            <div class="input-field col s12">
+              <input placeholder="" id="Dirección" type="text" class="validate">
+              <label for="Direccíon">Dirección de tu negocio</label>
             </div>
-            <div class="qempresa1">
-              <div class="empresa input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Describe la opción que acabas de escoger</label>
-                <span class="helper-text" data-error="wrong" data-success="right">Explica que vacantes ofreces y especifica las prestaciones, el salario y otros detalles que consideres importantes</span>
+            <div class="input-field col s12">
+              <input placeholder="" id="Horario" type="text" class="validate">
+              <label for="Horario" >Horario de atención</label>
             </div>
+            <div class="input-field col s12">
+              <textarea id="datosAd" class="materialize-textarea"></textarea>
+              <label for="datosAd">Aqui puedes poner otras cosas sobre tu negocio</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Cosas como los medios de pago que aceptas, entre otros</span>
             </div>
-            <div class="qempresa2">
-              <div class="empresa input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Describe la opción que acabas de escoger</label>
-                <span class="helper-text" data-error="wrong" data-success="right">Explica que servicios ofreces y explica los costos, tu experiencia, la ubicación de tu negocio y las ventajas de contratarte; si trabajas independiente y a domicilio pronto te contactaremos con quienes buscan tus servicios</span>
+            <div class="input-field col s12">
+              <textarea id="vacantes" class="materialize-textarea"></textarea>
+              <label for="vacantes">Ofrece trabajo en tu negocio</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Al registrar tu negocio también puedes ofrecer empleo, describe la oferta de empleo que deseas hacer</span>
             </div>
+            <div class="left">
+              <a class="volver waves-effect waves-light btn">Volver</a>
             </div>
-            <div class="qpersona1">
-              <div class="persona input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Describe la opción que acabas de escoger</label>
-                <span class="helper-text" data-error="wrong" data-success="right">Por medio de la red de empleos puedes contratar casi cualquier servicio: ocasional y rápido o algo que lleve un poco mas de tiempo, si requieres de un servicio inmediato recuerda dejarnos tu dirección y explicarnos bien el servicio</span>
+            <div class="center">
+              <button class="btn waves-effect waves-light" type="submit" name="action" id="registrobt">Enviar
+                <i class="material-icons right">send</i>
+              </button>
             </div>
+          </div>
+          <div class="aservicios row">
+            <div class="col s12">
+              <h3 class="center" ><b>Ofrece tus servicios</b></h3>
+              <p class="center"><b>En caso de que seas trabajador independiente y realices tu trabajo a domicilio</b>, describe tus servicios y cada vez que alguien solicite ese servicio por medio de nuestra red lo contactarémos contigo</p>
+              <div class="center">
+                <a class="waves-effect waves-light btn" id="serviciosB">Ofrecer mis servicios</a>
+              </div>
             </div>
-           <div class="qpersona2">
-             <div class="persona input-field col s12">
-               <textarea id="textarea1" class="materialize-textarea"></textarea>
-               <label for="textarea1">Describe la opción que escogiste</label>
-               <span class="helper-text" data-error="wrong" data-success="right">Dinos en que deseas trabajar y <b>además</b> envíanos tu hoja de vida  <a href="mailto:redempleosguateque@gmail.com">aqui </a></span>
-           </div>
-           <div class="comentarios input-field col s12">
-             <textarea id="textarea2" class="materialize-textarea"></textarea>
-             <label for="textarea1">Déjanos tus comentarios</label>
-             <span class="helper-text" data-error="wrong" data-success="right">Ayúdanos a construir una economía amigable en <b>Guateque</b> dinos que esperas de la <b>Red De Empleo De guateque</b> y pronto mejoraremos</span>
-             <div class="col s6 offset-s4">
-             <button class="btn waves-effect waves-light gray" type="submit" name="action">Enviar todo
-                <i class="material-icons right"></i>
-             </button>
-           </div>
-         </div>
-           </div>
-           <div class="col s6 offset-s4">
-             <button class="btn waves-effect waves-light gray" id="listo" type="submit" name="action">Listo
-              <i class="material-icons right"></i>
-            </button>
-           </div>
+          </div>
+          <div class="servicios row">
+            <h2 class="center" >Estás ofreciendo tus servicios</h2>
+            <div class="input-field col s12">
+              <input placeholder="Por ejemplo: Peluqueria" id="actividadN" type="text" class="validate">
+              <label for="actividadN">Describe los servicios que ofreces </label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="" id="nombreS" type="text" class="validate">
+              <label for="nombreD">Cúal es tu nombre</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="" id="numeroS" type="text" class="validate">
+              <label for="numeroS">Número de contacto</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="" id="HorarioS" type="text" class="validate">
+              <label for="Horario" >Horario de trabajo</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="datosAd" class="materialize-textarea"></textarea>
+              <label for="datosAd">Aqui puedes poner otras cosas sobre tus servicios</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Cosas como los medios de pago que aceptas, tus tarifas y experiencia</span>
+            </div>
+            <div class="left">
+              <a class="volver waves-effect waves-light btn">Volver</a>
+            </div>
+            <div class="center">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+
+          </div>
+
         </form>
       </div>
     </div>
-
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-large gray">
-        <i class="large material-icons"><img class="logo" src="images/lr.png"></i>
-      </a>
+    <div class="center">
+      <a href="welcome.html" class="home waves-effect waves-light btn"><i class="material-icons right">home</i>Página principal</a>
     </div>
-
-
-
 
 
     <script src="js/jquery-3.0.0.js" type="text/javascript"></script>

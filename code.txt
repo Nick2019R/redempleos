@@ -1,0 +1,133 @@
+<div class="input-field col s12">
+              <label class="active">Qué función vas a desempeñar ésta vez?</label>
+                <select class="tipo browser-default">
+                  <option value="" disabled selected>Escoge una opción</option>
+                  <option value="1">Empresa</option>
+                  <option value="2" class="persona-op">Persona</option>
+                </select>
+                <span class="ayuda1 helper-text" data-error="wrong" data-success="right">Escoge <b>empresa</b> si quieres ofrecer vacantes o dar a conocer los servicios que encontrarémos en tu negocio o los que ofreces como trabajador independiente y a domicilio y <b>persona</b> si quieres contratar un servicio: desde un pago de facturas hasta sacar a pasear tu perro o construir el segundo piso de tu casa Y también si quieres encontrar tu próximo trabajo</span>
+            </div>
+            <div class="empresa input-field col s12" >
+              <label class="active">Qué quieres hacer como empresa?</label>
+                <select class="Qempresa browser-default">
+                  <option value="" disabled selected>Escoge una opción</option>
+                  <option value="1">Ofrecer vacantes</option>
+                  <option value="2">Ofrecer servicios</option>
+                </select>
+            </div>
+            <div class="persona input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_prefix" type="text" class="nombre">
+              <label class="active" for="icon_prefix">Nombre Completo</label>
+            </div>
+            <div class="persona input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="icon_telephone" type="tel" class="validate">
+              <label class="active" for="icon_telephone">Número celular</label>
+            </div>
+            <div class="persona input-field col s12">
+              <label class="active">Qué quieres hacer como persona?</label>
+                <select class="Qpersona browser-default">
+                  <option value="" disabled selected>Escoge una opción</option>
+                  <option value="1">Contratar un servicio</option>
+                  <option value="2">Buscar trabajo</option>
+                </select>
+            </div>
+            <div class="qempresa1">
+              <div class="empresa input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Describe la opción que acabas de escoger</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Explica que vacantes ofreces y especifica las prestaciones, el salario y otros detalles que consideres importantes</span>
+            </div>
+            </div>
+            <div class="qempresa2">
+              <div class="empresa input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Describe la opción que acabas de escoger</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Explica que servicios ofreces y explica los costos, tu experiencia, la ubicación de tu negocio y las ventajas de contratarte; si trabajas independiente y a domicilio pronto te contactaremos con quienes buscan tus servicios</span>
+            </div>
+            </div>
+            <div class="qpersona1">
+              <div class="persona input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Describe la opción que acabas de escoger</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Por medio de la red de empleos puedes contratar casi cualquier servicio: ocasional y rápido o algo que lleve un poco mas de tiempo, si requieres de un servicio inmediato recuerda dejarnos tu dirección y explicarnos bien el servicio</span>
+            </div>
+            </div>
+           <div class="qpersona2">
+             <div class="persona input-field col s12">
+               <textarea id="textarea1" class="materialize-textarea"></textarea>
+               <label for="textarea1">Describe la opción que escogiste</label>
+               <span class="helper-text" data-error="wrong" data-success="right">Dinos en que deseas trabajar y <b>además</b> envíanos tu hoja de vida  <a href="mailto:redempleosguateque@gmail.com">aqui </a></span>
+           </div>
+           <div class="comentarios input-field col s12">
+             <textarea id="textarea2" class="materialize-textarea"></textarea>
+             <label for="textarea1">Déjanos tus comentarios</label>
+             <span class="helper-text" data-error="wrong" data-success="right">Ayúdanos a construir una economía amigable en <b>Guateque</b> dinos que esperas de la <b>Red De Empleo De guateque</b> y pronto mejoraremos</span>
+             <div class="col s6 offset-s4">
+             <button class="btn waves-effect waves-light gray" type="submit" name="action">Enviar todo
+                <i class="material-icons right"></i>
+             </button>
+           </div>
+         </div>
+           </div>
+           <div class="col s6 offset-s4">
+             <button class="btn waves-effect waves-light gray" id="listo" type="submit" name="action">Listo
+              <i class="material-icons right"></i>
+            </button>
+
+
+$(function(){
+  $("#listo").click(function(e){
+    e.preventDefault();
+    $("#listo").hide("fast");
+    $(".input-field").hide("fast");
+    $("#textarea2").parent().show("fast");
+  })
+ $(".persona").hide("fast");
+ $(".empresa").hide("fast");
+ $(".comentarios").hide("fast");
+ $(".tipo").change(function(){
+ var cual =  $(".tipo").val();
+ if (cual == 1){
+   $(".ayuda1").hide("fast");
+    $(".persona").hide("fast");
+    $(".empresa").show("fast");
+    $(".qempresa2").hide("fast");
+     $(".qempresa1").hide("fast");
+ }else{
+   $(".ayuda1").hide("fast");
+   $(".empresa").hide("fast");
+   $(".persona").show("fast");
+   $(".qpersona2").hide("fast");
+    $(".qpersona1").hide("fast");
+ }
+ })
+ $(".Qempresa").change(function(){
+ var cual =  $(".Qempresa").val();
+ if (cual == 1){
+    $(".qempresa2").hide("fast");
+    $(".qempresa1").show("fast");
+ }else{
+   $(".qempresa2").show("fast");
+   $(".qempresa1").hide("fast");
+ }
+ })
+ $(".Qpersona").change(function(){
+ var cual =  $(".Qpersona").val();
+ if (cual == 1){
+    $(".qpersona2").hide("fast");
+    $(".qpersona1").show("fast");
+ }else{
+   $(".qpersona2").show("fast");
+   $(".qpersona1").hide("fast");
+ }
+ })
+$('.fixed-action-btn').floatingActionButton();
+$(".nombre").blur(function(){
+  var tipousuario = $("#icon_prefix").value;
+  console.log(tipousuario)
+  localStorage.setItem( "Nombre" , tipousuario);
+})
+
+})
